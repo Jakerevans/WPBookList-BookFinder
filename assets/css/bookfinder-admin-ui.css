@@ -1,0 +1,181 @@
+#wpbooklist-bookfinder-search-title{
+    text-align:center;
+}
+
+#wpbooklist-bookfinder-search-title div{
+    display:inline-block;
+}
+
+#wpbooklist-bookfinder-search-title button, #wpbooklist-bookfinder-search-title label{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+}
+
+#wpbooklist-bookfinder-results-div{
+    margin-top:40px;
+}
+
+.wpbooklist-bookfinder-results-indiv{
+    margin: 0px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0px 0px 5px #888;
+    height: 100%;
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    vertical-align: top;
+    height: 250px;
+}
+
+.wpbooklist-bookfinder-results-indiv img{
+    width: 100px;
+    vertical-align: top;
+
+}
+
+#wpbooklist-bookfinder-results-container{
+    margin-bottom: 60px;
+    text-align:center;
+}
+
+.wpbooklist-bookfinder-colorbox{
+    cursor: pointer;
+}
+
+.wpbooklist-bookfinder-checkbox-div{
+    margin-bottom: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.wpbooklist-bookfinder-checkbox-div label{
+    margin-right: 5px;
+    position: relative;
+    bottom: 2px;
+}
+
+#wpbooklist_saved_title_link{
+    z-index: 999;
+    display: block;
+    left: 0;
+    right: 0;
+    font-size: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    position: absolute;
+    text-align: center;
+    display: -webkit-box;
+    max-width: 400px;
+    height: 45px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wpbooklist-bookfinder-indiv-holder{
+    display: inline-block;
+    box-shadow: 0px 0px 30px #888888;
+    border-collapse: separate;
+    background-color: white;
+    background-clip: padding-box;
+    border-width: 30px;
+    border-color: transparent;
+    width: 140px;
+    margin: 0px;
+    padding: 10px;
+    position: relative;
+    vertical-align: top;
+}
+
+#wpbooklist-bookfinder-add-books-div{
+    margin-bottom: 45px;
+}
+
+#wpbooklist-bookfinder-add-books-div button{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+#wpbooklist-bookfinder-select-library{
+    width:200px;
+}
+
+#wpbooklist-bookfinder-page-post-container label{
+    top: 0px;
+    margin-left: 0px;
+    margin-right: 24px;
+}
+
+#wpbooklist-bookfinder-page-post-container table {
+    width: 100%;
+}
+
+#wpbooklist-bookfinder-div-container{
+    text-align: center;
+}
+
+#wpbooklist-bookfinder-status-div {
+    opacity: 0;
+    height: 0px;
+}
+
+#wpbooklist-bookfinder-div-for-hiding-scroll {
+    width: 95%;
+    overflow: hidden;
+}
+
+#wpbooklist-bookfinder-title-response {
+    height: 0px;
+    opacity: 0px;
+    overflow-y: scroll;
+    width: 107%;
+}
+
+.wpbooklist-bookfinder-response-span {
+    font-style: italic;
+    margin-bottom: 5px;
+    margin-top: 4px;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+}
+
+.wpbooklist-spinner {
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+    margin: 10px auto;
+    -webkit-animation: rotation .6s infinite linear;
+    -moz-animation: rotation .6s infinite linear;
+    -o-animation: rotation .6s infinite linear;
+    animation: rotation .6s infinite linear;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid #F05A1A;
+    border-radius: 100%;
+    position: relative;
+}
+
+#wpbooklist-bookfinder-page-post-container table, #wpbooklist-bookfinder-page-post-container td, #wpbooklist-bookfinder-page-post-container tr{
+    border:none!important;
+    background-color:none!important;
+}
