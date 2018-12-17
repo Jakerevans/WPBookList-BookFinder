@@ -28,6 +28,14 @@ global $wpdb;
 require_once('includes/bookfinder-functions.php');
 require_once('includes/bookfinder-ajaxfunctions.php');
 
+// Root plugin folder directory.
+if ( ! defined('ROOT_WPBL_DIR' ) ) {
+	define( 'WPBOOKLIST_VERSION_NUM', '6.1.2' );
+}
+
+// This Extnesion's Version Number.
+define( 'WPBOOKLIST_BOOKFINDER_VERSION_NUM', '6.1.2' );
+
 // Root plugin folder URL of this extension
 define('BOOKFINDER_ROOT_URL', plugins_url().'/wpbooklist-bookfinder/');
 
@@ -36,6 +44,44 @@ define('BOOKFINDER_PREFIX', $wpdb->prefix);
 
 // Root plugin folder directory for this extension
 define('BOOKFINDER_ROOT_DIR', plugin_dir_path(__FILE__));
+
+// Root WordPress Plugin Directory.
+define( 'BOOKFINDER_ROOT_WP_PLUGINS_DIR', str_replace( '/wpbooklist-bookfinder', '', plugin_dir_path( __FILE__ ) ) );
+
+// Root WPBL Dir.
+if ( ! defined('ROOT_WPBL_DIR' ) ) {
+	define( 'ROOT_WPBL_DIR', BOOKFINDER_ROOT_WP_PLUGINS_DIR . 'wpbooklist/' );
+}
+
+// Root WPBL Url.
+if ( ! defined('ROOT_WPBL_URL' ) ) {
+	define( 'ROOT_WPBL_URL', plugins_url() . '/wpbooklist/' );
+}
+
+// Root WPBL Classes Dir.
+if ( ! defined('ROOT_WPBL_CLASSES_DIR' ) ) {
+	define( 'ROOT_WPBL_CLASSES_DIR', ROOT_WPBL_DIR . 'includes/classes/' );
+}
+
+// Root WPBL Transients Dir.
+if ( ! defined('ROOT_WPBL_TRANSIENTS_DIR' ) ) {
+	define( 'ROOT_WPBL_TRANSIENTS_DIR', ROOT_WPBL_CLASSES_DIR . 'transients/' );
+}
+
+// Root WPBL Translations Dir.
+if ( ! defined('ROOT_WPBL_TRANSLATIONS_DIR' ) ) {
+	define( 'ROOT_WPBL_TRANSLATIONS_DIR', ROOT_WPBL_CLASSES_DIR . 'translations/' );
+}
+
+// Root WPBL Root Img Icons Dir.
+if ( ! defined('ROOT_WPBL_IMG_ICONS_URL' ) ) {
+	define( 'ROOT_WPBL_IMG_ICONS_URL', ROOT_WPBL_URL . 'assets/img/icons/' );
+}
+
+// Root WPBL Root Utilities Dir.
+if ( ! defined('ROOT_WPBL_UTILITIES_DIR' ) ) {
+	define( 'ROOT_WPBL_UTILITIES_DIR', ROOT_WPBL_CLASSES_DIR . 'utilities/' );
+}
 
 // Root Image Icons URL of this extension
 define('BOOKFINDER_ROOT_IMG_ICONS_URL', BOOKFINDER_ROOT_URL.'assets/img/');
@@ -84,6 +130,9 @@ add_action( 'wp_footer', 'wpbooklist_bookfinder_colorbox_action_javascript' );
 add_action( 'admin_footer', 'wpbooklist_bookfinder_colorbox_action_javascript' );
 add_action( 'wp_ajax_wpbooklist_bookfinder_colorbox_action', 'wpbooklist_bookfinder_colorbox_action_callback' );
 add_action( 'wp_ajax_nopriv_wpbooklist_bookfinder_colorbox_action', 'wpbooklist_bookfinder_colorbox_action_callback' );
+
+// Verifies that the core WPBookList plugin is installed and activated - otherwise, the Extension doesn't load and a message is displayed to the user.
+register_activation_hook( __FILE__, 'wpbooklist_bookfinder_core_plugin_required' );
 
 
 // Code for adding file that prevents computer sleep during the bookfinder process
